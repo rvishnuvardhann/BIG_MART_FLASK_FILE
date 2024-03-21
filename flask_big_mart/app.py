@@ -84,12 +84,13 @@ def home():
     ProductType = float(request.form['ProductType'])
     MRP   = float(request.form['MRP'])
     Outlet = float(request.form['Outlet'])
-    # Outlet_Establishment_Year = float(request.form['Outlet_Establishment_Year'])
+    Outlet_Establishment_Year = float(request.form['Outlet_Establishment_Year'])
+    Item_Identifier = float(request.form['Item_Identifier'])
     OutletSize = float(request.form['OutletSize'])
     LocationType = float(request.form['LocationType'])
     OutletType = float(request.form['OutletType'])
 
-    X = [[Weight,FatContent,ProductVisibility,ProductType,MRP,Outlet,OutletSize,LocationType,OutletType]]
+    X = [[Weight,FatContent,ProductVisibility,ProductType,MRP,Outlet,Outlet_Establishment_Year,Item_Identifier,OutletSize,LocationType,OutletType]]
 
     output = model.predict(X)
 
